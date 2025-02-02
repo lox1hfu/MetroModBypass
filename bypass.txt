@@ -1,0 +1,187 @@
+Tools::WriteAddr((void *) (UE4 + anort + eglSwapBuffers_32), (void *) "\x1F\x20\x03\xD5", 4); // 32 bit offline
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC50, OBFUSCATE("F3 0F 1E F8")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC54, OBFUSCATE("FD 7B 01 A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC58, OBFUSCATE("FD 43 00 91")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC5C, OBFUSCATE("60 BD 93 52")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC60, OBFUSCATE("30 80 0C 94")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC64, OBFUSCATE("73 26 00 B0")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC6C, OBFUSCATE("60 02 00 F9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC70, OBFUSCATE("20 BF 93 52")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC74, OBFUSCATE("33 84 0C 94")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC78, OBFUSCATE("60 06 00 F9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC7C, OBFUSCATE("40 C1 93 52")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC80, OBFUSCATE("18 89 0C 94")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC84, OBFUSCATE("60 0A 00 F9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC88, OBFUSCATE("00 C9 93 52")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC8C, OBFUSCATE("20 7E 0C 94")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC90, OBFUSCATE("60 0E 00 F9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC94, OBFUSCATE("A0 CA 93 52")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC98, OBFUSCATE("DA 81 0C 94")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC9C, OBFUSCATE("60 12 00 F9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCA0, OBFUSCATE("A0 CC 93 52")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCA4, OBFUSCATE("76 86 0C 94")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCA8, OBFUSCATE("60 16 00 F9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCAC, OBFUSCATE("40 D0 93 52")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCB0, OBFUSCATE("D0 8E 0C 94")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCB4, OBFUSCATE("60 1A 00 F9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCB8, OBFUSCATE("E0 D1 93 52")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCBC, OBFUSCATE("8F 92 0C 94")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCC0, OBFUSCATE("60 1E 00 F9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCC4, OBFUSCATE("E0 D3 93 52")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCC8, OBFUSCATE("55 7A 0C 94")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCCC, OBFUSCATE("FD 7B 41 A9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCD0, OBFUSCATE("60 22 00 F9")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCD4, OBFUSCATE("F3 07 42 F8")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCD8, OBFUSCATE("C0 03 5F D6")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCDC, OBFUSCATE("F4 4F BE A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCE0, OBFUSCATE("FD 7B 01 A9")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCE4, OBFUSCATE("FD 43 00 91")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCE8, OBFUSCATE("33 23 00 90")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCEC, OBFUSCATE("61 26 00 D0")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCF0, OBFUSCATE("40 02 00 D0")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCF4, OBFUSCATE("73 02 14 91")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCF8, OBFUSCATE("21 C0 0D 91")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCFC, OBFUSCATE("00 E0 04 91")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD00, OBFUSCATE("E2 03 13 AA")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD04, OBFUSCATE("3F 7C 00 A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD08, OBFUSCATE("3F 08 00 F9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD0C, OBFUSCATE("C9 FC FF 97")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD10, OBFUSCATE("74 26 00 D0")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD18, OBFUSCATE("E0 03 14 AA")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD1C, OBFUSCATE("ED 6E 0B 94")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD20, OBFUSCATE("60 23 00 B0")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD24, OBFUSCATE("00 CC 46 F9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD28, OBFUSCATE("FD 7B 41 A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD2C, OBFUSCATE("E1 03 14 AA")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD30, OBFUSCATE("E2 03 13 AA")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD34, OBFUSCATE("F4 4F C2 A8")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD38, OBFUSCATE("BE FC FF 17")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD3C, OBFUSCATE("F3 0F 1E F8")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD40, OBFUSCATE("FD 7B 01 A9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD44, OBFUSCATE("FD 43 00 91")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD48, OBFUSCATE("73 26 00 D0")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD50, OBFUSCATE("E0 03 13 AA")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD54, OBFUSCATE("64 1B 02 94")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD58, OBFUSCATE("FD 7B 41 A9")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD5C, OBFUSCATE("20 04 00 F0")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD60, OBFUSCATE("22 23 00 90")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD64, OBFUSCATE("00 C0 2C 91")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD68, OBFUSCATE("42 00 14 91")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD6C, OBFUSCATE("E1 03 13 AA")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD70, OBFUSCATE("F3 07 42 F8")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD74, OBFUSCATE("AF FC FF 17")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD78, OBFUSCATE("F4 4F BE A9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD7C, OBFUSCATE("FD 7B 01 A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD80, OBFUSCATE("FD 43 00 91")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD84, OBFUSCATE("33 23 00 90")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD88, OBFUSCATE("61 26 00 D0")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD8C, OBFUSCATE("40 02 00 D0")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD90, OBFUSCATE("73 02 14 91")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD94, OBFUSCATE("21 E0 1D 91")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD98, OBFUSCATE("00 E0 04 91")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD9C, OBFUSCATE("E2 03 13 AA")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDA0, OBFUSCATE("3F 7C 00 A9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDA4, OBFUSCATE("3F 08 00 F9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDA8, OBFUSCATE("A2 FC FF 97")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDAC, OBFUSCATE("74 26 00 D0")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDB4, OBFUSCATE("E0 03 14 AA")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDB8, OBFUSCATE("C6 6E 0B 94")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDBC, OBFUSCATE("60 23 00 B0")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDC0, OBFUSCATE("00 CC 46 F9")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDC4, OBFUSCATE("FD 7B 41 A9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDC8, OBFUSCATE("E1 03 14 AA")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDCC, OBFUSCATE("E2 03 13 AA")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDD0, OBFUSCATE("F4 4F C2 A8")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDD4, OBFUSCATE("97 FC FF 17")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDD8, OBFUSCATE("F5 0F 1D F8")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDDC, OBFUSCATE("F4 4F 01 A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDE0, OBFUSCATE("FD 7B 02 A9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDE4, OBFUSCATE("FD 83 00 91")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDE8, OBFUSCATE("73 26 00 F0")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDF0, OBFUSCATE("E0 03 13 AA")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC50, OBFUSCATE("F3 0F 1E F8")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC54, OBFUSCATE("FD 7B 01 A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC58, OBFUSCATE("FD 43 00 91")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC5C, OBFUSCATE("60 BD 93 52")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC60, OBFUSCATE("30 80 0C 94")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC64, OBFUSCATE("73 26 00 B0")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC6C, OBFUSCATE("60 02 00 F9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC70, OBFUSCATE("20 BF 93 52")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC74, OBFUSCATE("33 84 0C 94")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC78, OBFUSCATE("60 06 00 F9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC7C, OBFUSCATE("40 C1 93 52")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC80, OBFUSCATE("18 89 0C 94")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC84, OBFUSCATE("60 0A 00 F9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC88, OBFUSCATE("00 C9 93 52")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC8C, OBFUSCATE("20 7E 0C 94")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC90, OBFUSCATE("60 0E 00 F9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC94, OBFUSCATE("A0 CA 93 52")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC98, OBFUSCATE("DA 81 0C 94")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFC9C, OBFUSCATE("60 12 00 F9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCA0, OBFUSCATE("A0 CC 93 52")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCA4, OBFUSCATE("76 86 0C 94")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCA8, OBFUSCATE("60 16 00 F9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCAC, OBFUSCATE("40 D0 93 52")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCB0, OBFUSCATE("D0 8E 0C 94")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCB4, OBFUSCATE("60 1A 00 F9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCB8, OBFUSCATE("E0 D1 93 52")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCBC, OBFUSCATE("8F 92 0C 94")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCC0, OBFUSCATE("60 1E 00 F9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCC4, OBFUSCATE("E0 D3 93 52")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCC8, OBFUSCATE("55 7A 0C 94")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCCC, OBFUSCATE("FD 7B 41 A9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCD0, OBFUSCATE("60 22 00 F9")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCD4, OBFUSCATE("F3 07 42 F8")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCD8, OBFUSCATE("C0 03 5F D6")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCDC, OBFUSCATE("F4 4F BE A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCE0, OBFUSCATE("FD 7B 01 A9")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCE4, OBFUSCATE("FD 43 00 91")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCE8, OBFUSCATE("33 23 00 90")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCEC, OBFUSCATE("61 26 00 D0")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCF0, OBFUSCATE("40 02 00 D0")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCF4, OBFUSCATE("73 02 14 91")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCF8, OBFUSCATE("21 C0 0D 91")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFCFC, OBFUSCATE("00 E0 04 91")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD00, OBFUSCATE("E2 03 13 AA")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD04, OBFUSCATE("3F 7C 00 A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD08, OBFUSCATE("3F 08 00 F9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD0C, OBFUSCATE("C9 FC FF 97")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD10, OBFUSCATE("74 26 00 D0")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD18, OBFUSCATE("E0 03 14 AA")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD1C, OBFUSCATE("ED 6E 0B 94")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD20, OBFUSCATE("60 23 00 B0")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD24, OBFUSCATE("00 CC 46 F9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD28, OBFUSCATE("FD 7B 41 A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD2C, OBFUSCATE("E1 03 14 AA")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD30, OBFUSCATE("E2 03 13 AA")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD34, OBFUSCATE("F4 4F C2 A8")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD38, OBFUSCATE("BE FC FF 17")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD3C, OBFUSCATE("F3 0F 1E F8")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD40, OBFUSCATE("FD 7B 01 A9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD44, OBFUSCATE("FD 43 00 91")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD48, OBFUSCATE("73 26 00 D0")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD50, OBFUSCATE("E0 03 13 AA")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD54, OBFUSCATE("64 1B 02 94")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD58, OBFUSCATE("FD 7B 41 A9")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD5C, OBFUSCATE("20 04 00 F0")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD60, OBFUSCATE("22 23 00 90")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD64, OBFUSCATE("00 C0 2C 91")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD68, OBFUSCATE("42 00 14 91")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD6C, OBFUSCATE("E1 03 13 AA")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD70, OBFUSCATE("F3 07 42 F8")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD74, OBFUSCATE("AF FC FF 17")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD78, OBFUSCATE("F4 4F BE A9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD7C, OBFUSCATE("FD 7B 01 A9")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD80, OBFUSCATE("FD 43 00 91")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD84, OBFUSCATE("33 23 00 90")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD88, OBFUSCATE("61 26 00 D0")).Modify(); // sosal?
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD8C, OBFUSCATE("40 02 00 D0")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD90, OBFUSCATE("73 02 14 91")).Modify(); // СОРКИЧ ЛУЧШИЙ
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD94, OBFUSCATE("21 E0 1D 91")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD98, OBFUSCATE("00 E0 04 91")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFD9C, OBFUSCATE("E2 03 13 AA")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDA0, OBFUSCATE("3F 7C 00 A9")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDA4, OBFUSCATE("3F 08 00 F9")).Modify(); // sorkich - лучший
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDA8, OBFUSCATE("A2 FC FF 97")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDAC, OBFUSCATE("74 26 00 D0")).Modify(); // Разработчик - @gde_sorkich
+MemoryPatch::createWithHex("libanogs.so", 0x0DFDB4, OBFUS
