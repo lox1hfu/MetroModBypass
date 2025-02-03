@@ -1,248 +1,1447 @@
-PATCH_LIB("libanogs.so", "0x2A0C1D		", "00 00 A0 E3 1E FF 2F E1"); // offline ban
-PATCH_LIB("libanogs.so", "0x2C3A7F		", "00 00 A0 E3 1E FF 2F E1"); // offline ban
-PATCH_LIB("libanogs.so", "0x2C674B		", "00 00 A0 E3 1E FF 2F E1"); // offline ban
-PATCH_LIB("libanogs.so", "0x2CAD59		", "00 00 A0 E3 1E FF 2F E1"); // offline ban
-PATCH_LIB("libanogs.so", "0x2CC06D		", "00 00 A0 E3 1E FF 2F E1"); // online year
-hook add patc
-
-if (Config.Bypass) {
-MemoryPatch::createWithHex("libUE4.so",0x41DF94,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41DE70,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41D650,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41D640,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41D61C,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41D608,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41D5C0,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41D2D8,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41D1A0,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41D08C,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41CFBC,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libUE4.so",0x41CFAC,"h FF FF FF FF",131072).Modify();
-MemoryPatch::createWithHex("libanogs.so", 0x14dc4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x14dc8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdc0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdc4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdc8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdcc, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdd0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdd4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdd8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fddc, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fde0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fde4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fde8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdec, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdf0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdf4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdf8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fdfc, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe00, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe04, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe08, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe0c, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe10, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe14, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe18, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe28, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe2c, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe30, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe34, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe38, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe3c, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe40, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe44, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe48, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe4c, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe50, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe54, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x1fe58, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b04c, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b050, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b054, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b058, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b05c, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b060, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b064, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b068, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b06c, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b070, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b074, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b078, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b07c, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b080, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b084, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b088, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b08c, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b090, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b094, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b098, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b09c, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0a0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0a4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0a8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0ac, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0c0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0c4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0c8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0cc, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0d0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0d4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0d8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0dc, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0e0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0e4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0e8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0ec, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x2b0f0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7c8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7cc, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7d0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7d4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7d8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7dc, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7e0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7e4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7e8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7ec, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7f0, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7f4, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7f8, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x4e7fc, "00 00 A0 E3 1E FF 2F E1").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f30, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f34, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f38, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f3c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f40, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f44, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f48, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f4c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f50, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f54, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f58, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f5c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f60, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f64, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f68, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f6c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f70, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f74, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f78, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f7c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f80, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbd0, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbd4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbd8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbdc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbe0, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbe4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbe8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbec, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbf0, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbf4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbf8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbfc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc00, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc04, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc08, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc0c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc10, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc14, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc18, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc1c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc20, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dbc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dc4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dc8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dcc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dd4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dd8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41ddc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41de0, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41de4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41de8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41df0, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41df4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dfc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e00, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e04, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e0c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e10, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e14, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e1c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e20, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e28, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f30, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f34, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f38, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f3c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f40, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f44, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f48, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f4c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f50, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f54, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f58, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f5c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f60, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f64, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f68, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f6c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f70, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f74, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f78, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f7c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x61f80, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbd0, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbd4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbd8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbdc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbe0, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbe4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbe8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbec, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbf0, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbf4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbf8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cbfc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc00, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc04, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc08, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc0c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc10, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc14, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc18, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc1c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x5cc20, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dbc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dc4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dc8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dcc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dd4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dd8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41ddc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41de0, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41de4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41de8, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41df0, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41df4, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41dfc, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e00, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e04, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e0c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e10, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e14, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e1c, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e20, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x41e28, "2d 1e 00 01").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0x95ef0, "00 20 70 47").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0xd218c, "00 20 70 47").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0xd2198, "00 20 70 47").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0xd219c, "00 20 70 47").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0xd21a0, "00 20 70 47").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0xd21a4, "00 20 70 47").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0xd21a8, "00 20 70 47").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0xd21ac, "00 20 70 47").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0xd21b0, "00 20 70 47").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0xd21b4, "00 20 70 47").Modify(); 
-MemoryPatch::createWithHex("libanogs.so", 0xd21b8, "00 20 70 47").Modify(); 
-MemoryPatch
+PATCH_LIB("libanogs.so", "0x2C4496", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C44D8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4522", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C455E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4598", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C45C8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C45FE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4638", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C469A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C46D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4714", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C474C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4794", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C47C6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4806", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4858", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C48A6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C48F0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C496E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C49B2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C49FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4A40", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4A8C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4AC6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4B02", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4B40", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4B7C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4BBC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4BF0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4C18", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4C40", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4C86", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4CC6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4CFA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4D30", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4D70", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4DA0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4DDC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4E1E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4E5C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4EB0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4EF0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4F58", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4F9C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C4FE4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5030", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C509E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C50E4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5138", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C517A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C51AA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C51F0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C523E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5270", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C52B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C530A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5352", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C53A4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C53E0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5446", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5488", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C54E0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C551E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5556", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5598", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C55D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C562E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5666", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C56CE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C56FE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C575A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C57A4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5806", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C584E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5892", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C58D8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C591A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C596E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C59C6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5A82", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5B14", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5B5E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5BD0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5C1E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5C66", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5CFC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5D7A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5DB8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5ECE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5FAC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C5FD4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6002", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6030", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6058", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C60BA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C60FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6138", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6188", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C61C8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6214", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6268", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C629C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C62D2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C630A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6350", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6390", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C63D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C640E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C646E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C64A2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C64CC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6500", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6530", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6560", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C659E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C65D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C65FE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6630", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6664", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C66AA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C670C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6744", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C679E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C67E8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6820", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C685C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6896", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C68D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6900", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C692A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6990", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C69CA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6A04", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6A52", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6A90", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6AE8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6B18", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6B50", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6B7E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6BC2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6BF4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6C1E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6C56", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6C92", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6CBC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6D08", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6D4C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6D7E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6DB0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6DFA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6E4C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6E84", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6EC8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6F0E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6F46", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6F7A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C6FDA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7004", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7056", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7084", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C70D2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C710A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C714C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C717E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C71C2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C71F8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C724A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7296", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C72D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7300", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7360", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C73B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C741C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C744C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C748A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C74BC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7500", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7534", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C756E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7598", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C75F4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7620", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C767E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C76DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7714", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C774A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7780", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C77C4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C77F6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C782E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7856", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C78B0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C78DE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7914", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C795E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C79C2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C79F8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7A38", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7A72", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7AA8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7AF6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7B20", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7B52", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7B82", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7BB6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7BF6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7C54", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7CBE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7D08", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7D4A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7D9E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7DCE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7DF6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7E4A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7E94", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7EBC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7F34", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7F6E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C7FEC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8028", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8084", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C80F4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8138", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8162", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8192", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C81D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8210", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8258", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8298", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C82D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8310", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8344", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C83A8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C83EC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8420", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8466", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C84AE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C84EC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8524", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C855E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C85A4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C85F0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C862A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8674", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C86A6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C86D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C870A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C873E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8774", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C87BE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C87E6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C881E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8880", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C88FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C892E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8960", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C89AE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C89F2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8A32", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8A66", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8A94", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8ACE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8B06", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8B38", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8B66", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8BB4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8BFC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8C42", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8C80", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8CAE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8CFE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8D42", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8D92", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8DCA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8E06", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8E4E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8E86", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8ECA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8F4C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8F98", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C8FDA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9048", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C90A6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C90FC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9160", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C91A6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C91CE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C91F6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9250", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9282", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C92C6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C930A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C936C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C93B6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C93EA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9420", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9450", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9482", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C94CE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9506", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C955A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9588", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C95D0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9612", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9646", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C967A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C96AC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C96E4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9728", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9782", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C97AC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C97D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C982C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9880", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C98DE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9924", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9992", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C99C0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C99F8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9A36", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9A84", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9AC0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9AFA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9B34", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9B60", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9B8A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9BC4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9BF0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9C1E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9C52", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9C82", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9CBE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9CF6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9D26", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9D5C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9D9E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9DE6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9E1A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9E52", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9E86", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9EC6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9EEE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9F16", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9F94", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2C9FDE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA01E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA05C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA08A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA0F6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA130", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA160", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA19A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA1FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA228", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA292", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA2BE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA2EC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA330", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA368", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA3B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA416", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA44E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA47E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA4C0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA4FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA526", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA564", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA5B4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA5E6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA620", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA6A2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA6DE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA72E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA774", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA7B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA812", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA850", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA888", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA8C8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA908", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA944", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA982", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CA9AA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAA00", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAA70", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAAFA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAB74", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CABB4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CABF4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAC46", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAC9A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CACF6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAD2C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAD8A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAE00", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAE4C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAE7A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAEC8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAF02", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAF46", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAF7A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAFC2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CAFF4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB046", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB08A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB0CC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB100", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB156", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB1BA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB1FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB252", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB280", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB2AA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB31C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB36C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB398", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB406", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB458", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB4BC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB52E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB584", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB5B6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB5FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB636", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB6AA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB6DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB712", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB75A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB7A4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB7D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB818", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB852", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB8C6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB916", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB966", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB992", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CB9E4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBA0C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBA5A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBAA8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBB2A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBB96", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBBC6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBC48", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBC9C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBCCE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBD32", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBDAE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBE34", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBE7A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBEAE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBF12", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBF70", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CBFC4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC014", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC05E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC09C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC0FC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC142", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC18A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC1E2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC20A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC26C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC2CC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC312", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC34A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC39C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC3CC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC3FE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC434", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC466", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC49A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC4C8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC4FC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC52A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC556", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC582", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC5B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC5EC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC61C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC652", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC682", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC6BE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC6F8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC728", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC756", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC784", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC7C2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC7F4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC822", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC85C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC888", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC8C2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC8EE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC91E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC946", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC992", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CC9E6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCA2C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCA5C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCA92", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCACC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCB04", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCB36", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCB68", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCB94", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCBD0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCC00", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCC2E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCC64", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCC94", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCCC0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCCF6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCD22", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCD50", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCD84", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCDC8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCE02", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCE42", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCE78", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCEB6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCEEA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCF1C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCF4A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCF8A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCFC4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CCFF2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD02E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD060", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD094", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD0DC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD116", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD154", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD17E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD1AA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD1FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD24E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD290", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD2DE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD31E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD362", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD3A6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD3DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD442", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD488", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD4B4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD4E2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD50C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD54C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD58A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD5BA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD5EC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD618", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD648", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD674", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD69E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD6E6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD724", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD788", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD7E0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD82A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD874", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD8A0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD8EC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD91E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD950", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD97C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD9BC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CD9F2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDA2A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDA5C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDA9C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDAD0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDAFE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDB2A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDB60", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDB9C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDBC6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDC06", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDC46", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDC8E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDCBE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDCE8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDD16", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDD40", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDD98", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDDE2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDE26", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDE80", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDEEA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDF32", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDF5E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDF92", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CDFD0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE00A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE040", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE072", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE09A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE0C8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE0FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE12A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE154", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE182", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE1B0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE1E6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE214", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE24A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE272", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE2A8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE2E6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE326", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE352", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE37C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE3C8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE3F8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE438", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE47E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE4B2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE4FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE52C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE560", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE598", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE5EC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE63C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE67A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE6AC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE6E8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE72E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE768", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE7B2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE7E0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE818", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE84E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE87E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE8D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE90A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE934", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE978", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE9B4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CE9F0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEA1E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEA54", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEA8A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEAB8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEAF8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEB28", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEB90", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEBBE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEC08", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEC36", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEC6C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CECA8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CECEE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CED3E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CED70", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEDA0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEE1A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEE4C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEE82", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEEBE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEEEA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEF30", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEF5A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEFAE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CEFDE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF01C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF052", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF0AC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF0DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF10C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF14A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF19A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF1D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF202", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF242", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF296", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF2DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF336", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF3A4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF432", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF470", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF4A6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF4D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF500", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF54C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF5BC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF5F2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF62E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF67E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF6B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF704", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF736", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF766", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF79A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF7E8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF828", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF858", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF880", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF8AE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF8E2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF916", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF954", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF98E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF9C4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CF9FE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFA38", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFA68", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFA9E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFAD0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFB02", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFB2C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFB60", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFB8A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFBB8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFBF4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFC2E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFC60", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFC92", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFCC4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFCFA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFD56", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFDA6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFDF0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFE22", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFE5A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFEB4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFF30", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFF70", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFFB8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2CFFF6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0030", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0068", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D00BE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0104", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0160", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D01CC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0228", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0280", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D02AA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D02F2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0354", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0388", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D03F0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0496", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D051A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0582", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D05B0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0602", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0644", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0678", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D06AE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D06F2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0726", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0768", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D07A4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D07E2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0818", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0848", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D087E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D08AE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D08F4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D092E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0956", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D099E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D09CE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0A04", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0A3E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0A74", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0AB6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0B20", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0B70", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0BA0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0BDA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0C3C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0C6E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0CA4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0CF6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0D20", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0D62", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0DB4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0DF2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0E22", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0E60", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0EAA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0EE8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0F52", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D0FD6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1020", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D109A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D10CA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1106", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1142", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D118C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D11F0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1226", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1274", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D12B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1306", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1354", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D138A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D13C0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D13F2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D142C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1476", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D14B2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D14E2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D151C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1544", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D156C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D15A8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1604", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1656", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D16A4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D16DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D170C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D176C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1798", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D17DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1844", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1884", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D18DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1902", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D192E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D195A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D198C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D19E2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1A3C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1A80", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1AB6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1AE8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1B1C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1B46", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1B70", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1B9A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1BCE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1C2A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1C64", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1CAC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1CE2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1D30", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1D64", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1D90", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1DC6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1DFE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1E46", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1E74", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1ECA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1F0E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1F3C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1F88", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D1FBC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2012", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2066", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D209C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D20D8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D212A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D215C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D218E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D21B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D223A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D226C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D22A0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D22D0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D230C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D233C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2384", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D23D8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2418", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2458", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D24A8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D24F2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D251E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D257A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D25B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D25E8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2632", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D266C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D26BE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D26FC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2734", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D275E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D27C2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D27F4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2850", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2880", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D28DE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2930", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D295E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D29A2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D29CA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D29FC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2A68", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2A9C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2B26", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2B5A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2B8A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2BC0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2C0C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2C4E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2C82", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2CB2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2CFE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2D3C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2D72", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2DA4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2DD8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2E3E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2E9C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2EE0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2F2C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2F60", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2F96", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D2FCE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3006", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3040", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D308A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D30D8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3122", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D316C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D31D8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3210", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3254", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3298", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D32D0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3314", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3362", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D33A0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D33FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3440", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D347E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D34B6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D34EA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3518", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3554", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D359C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D35D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D361A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D365C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D369A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D36D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3724", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3786", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3804", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3860", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D38B6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D38E2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3920", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3950", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D39B2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D39E8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3A2E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3AA2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3B08", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3B82", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3C0C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3C3C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3C64", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3CD0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3D1E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3D9C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3E1E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3EB4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3F1C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3F8A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D3FEC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4040", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D409E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D40F6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D411E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4152", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D41C4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4210", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4260", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4292", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D42C8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D430C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4344", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D437C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D43AC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D43DE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4420", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4450", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D449E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D44D8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D454C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4582", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D45D0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D45FE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4640", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4668", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4690", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D46F2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D472E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4764", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4802", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D483A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4890", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D48D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4902", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D494E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4980", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D49B2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D49E4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4A1A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4A4A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4AA8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4AEA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4B28", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4B60", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4BDE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4C0A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4C5E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4C9A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4CFE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4D28", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4D50", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4DBA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4E08", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4E3C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4E76", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4EAA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4F04", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4F44", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4F74", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4FA2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D4FD2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5032", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D507A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D50CC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D50FC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5136", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5170", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D51A4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D51D8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5212", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D523E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D527A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D52B0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D52DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D530C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5342", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5376", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D53A0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5408", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5442", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D54A6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D54EE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5520", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5548", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D55A4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D55FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5632", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5662", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D56A0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D56FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5738", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5768", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D579A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D57CA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D581C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5870", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D58C2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D58F4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D592C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5968", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D599C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D59CC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5A08", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5A36", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5A70", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5A9E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5AD2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5B02", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5B36", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5B6C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5B98", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5BF4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5C36", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5C96", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5CE0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5D18", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5D40", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5D72", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5DD4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5E0E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5E66", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5EE2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5F36", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5F7A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5FB2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D5FEC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6028", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D605A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D608A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D60C2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D60F2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D613A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6180", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D61D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D620E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6248", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D62B6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6308", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D633E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6386", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D63D8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6400", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6428", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D648A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D64C6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D64FC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D659A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D65D2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6628", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D666E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D669A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D66E6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6718", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D674A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D677C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D67B2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D67E2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6840", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6882", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D68C0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D68F8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6976", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D69A2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D69F6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6A32", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6A96", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6AC0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6AE8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6B52", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6BA0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6BD4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6C0E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6C42", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6C9C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6CDC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6D0C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6D3A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6D6A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6DCA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6E12", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6E64", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6E94", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6ECE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6F08", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6F3C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6F70", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6FAA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D6FD6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7012", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7048", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7072", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D70A4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D70DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D710E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7138", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D71A0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D71DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D723E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7286", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D72B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D72E0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D733C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7392", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D73CA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D73FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7438", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7492", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D74D0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7500", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7532", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7562", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D75B4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7608", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D765A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D768C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D76C4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7700", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7734", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7764", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D77A0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D77CE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7808", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7836", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D786A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D789A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D78CE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7904", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7930", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D798C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D79CE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7A2E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7A78", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7AB0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7AD8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7B0A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7B6C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7BA6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7BFE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7C7A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7CCE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7D12", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7D4A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7D84", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7DC0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7DF2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7E22", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7E5A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7E8A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7ED2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7F18", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7F6C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7F9E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D7FD2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D804C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D808C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D80CE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D811C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D816E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8196", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D81BE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D821A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D825C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8292", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D832C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8368", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D83BA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8404", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8430", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D847C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D84AE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D84DE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8512", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8546", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8578", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D85D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D85FE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8654", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D868C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D86F6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8736", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8784", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D87BA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8820", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8854", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D887C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D88BE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D890E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8948", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8996", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D89F4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8A24", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8A62", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8A92", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8AC4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8AF0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8B74", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8BA8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8BE6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8C1E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8C6C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8CA6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8CCE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8D44", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8D84", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8DC2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8E0C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8E42", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8EBA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8F02", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8F32", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8F6C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8FC4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D8FEC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9014", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9076", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D90B8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D90FC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9164", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9194", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D91CA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9202", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9232", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9260", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D92D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9316", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9356", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D938E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D93D8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D940C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D943E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9482", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D94F2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9526", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D957C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D95AA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9626", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9668", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D969C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D96D4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9734", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D975C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9792", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D97EC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D982A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D986A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D98BE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9902", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9944", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9988", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D99CE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9A1A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9A52", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9A90", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9AC4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9B1E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9B56", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9BB8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9C08", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9C54", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9C7E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9CB2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9CF0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9D26", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9D5C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9D92", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9DC0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9DF8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9E38", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9E6A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9EA2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9EDE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9F1A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9F54", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9F82", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9FB2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2D9FF4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA02A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA05E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA092", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA0BA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA0E4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA144", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA188", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA1C0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA216", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA25A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA29C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA2E6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA328", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA378", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA3B0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA3EE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA422", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA47A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA4B4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA514", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA564", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA5A8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA5DC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA60A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA64E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA682", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA6BA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA6F0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA71C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA756", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA796", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA7C8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA800", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA83A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA878", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA8B0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA8E0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA910", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA94C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA988", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA9BA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DA9F0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAA18", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAA40", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAA98", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAAE4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAB10", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAB76", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DABBC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DABF6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAC2A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAC5A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAC8C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DACE8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAD3E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAD7A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DADB2", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DADEE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAE34", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAE6A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAEA6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAF1A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAF50", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAF8E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DAFD4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB006", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB080", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB0C6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB100", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB15E", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB188", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB1B0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB1FE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB24A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB280", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB2D6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB32A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB360", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB398", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB3C6", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB3FC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB44C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB4AA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB4EA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB51C", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB554", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB5A0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB5DA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB602", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB68A", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB6C0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB6FA", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB742", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB776", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB7F0", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB836", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB870", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB8AE", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB8F8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB920", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB972", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB9BC", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DB9F4", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DBA30", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DBA84", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
+PATCH_LIB("libanogs.so", "0x2DBAC8", "1F 20 03 D5 C0 03 5F D6"); //by @metroshop0071123
